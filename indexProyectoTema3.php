@@ -112,11 +112,12 @@
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio00.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
                                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="service_title">
                                                 <h3 >EJERCICIO 00</h3>
-                                                <h3 class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO"></h3>
                                             </div>
+                                        </div>
                                         </div>
                                     </a>
                                 </div>
@@ -136,6 +137,7 @@
                                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="service_title">
                                                 <h3>EJERCICIO 01</h3>
+                                                <h3 class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO"></h3>
                                             </div>
                                         </div>
                                     </a>
@@ -158,11 +160,12 @@
                                                 <h3>EJERCICIO 02</h3>
                                             </div>
                                         </div>
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO"></div>
                                     </a>
                                 </div>
                             </a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
