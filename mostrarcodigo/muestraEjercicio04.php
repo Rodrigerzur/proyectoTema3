@@ -7,11 +7,11 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>muestraEjercicio00.php</title>
+        <title>muestraEjercicio04.php</title>
     </head>
     <body>
         <?php
-        highlight_file("../codigoPHP/ejercicio00.php");
+        highlight_file("../codigoPHP/ejercicio04.php");
         ?>
     </body>
 </html>

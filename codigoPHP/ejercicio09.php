@@ -7,11 +7,14 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>muestraEjercicio00.php</title>
+        <title>Ejercicio09.php</title>
     </head>
     <body>
         <?php
-        highlight_file("../codigoPHP/ejercicio00.php");
+        #el nombre y la ruta ATENCION: netbeans marca que no es recomendable usar esto
+            $nombreFichero= $_SERVER['PHP_SELF'];
+            echo 'La ruta del archivo que se esta ejecutando es ';
+            echo $nombreFichero; 
         ?>
     </body>
 </html>

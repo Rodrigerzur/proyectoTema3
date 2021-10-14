@@ -147,14 +147,14 @@
 
                         <!-- Ejercicio -->
                         <div class="col-xl-4 col-md-6">
-                            <a href="">
+                            <a href="codigoPHP/ejercicio02.php">
                                 <div class="service">
                                     <div class="listing_image">
                                         <div class="listing_image_container">
                                             <img src="webroot/media/img/cat.jpeg" alt="">
                                         </div>
                                     </div>
-                                    <a href="../index.php">
+                                    <a href="mostrarcodigo/muestraEjercicio02.php">
                                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="service_title">
                                                 <h3>EJERCICIO 02</h3>
@@ -165,7 +165,183 @@
                                 </div>
                             </a>
                         </div>
-
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio03.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio03.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 03</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio04.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio04.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 04</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio05.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio05.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 05</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio06.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio06.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 06</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio07.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio07.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 07</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio08.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio08.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 08</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio09.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio09.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 09</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio10.php">
+                                <div class="service">
+                                    <div class="listing_image">
+                                        <div class="listing_image_container">
+                                            <img src="webroot/media/img/cat.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio10.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                        <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                            <div class="service_title">
+                                                <h3 >EJERCICIO 10</h3>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
