@@ -105,7 +105,6 @@
                         <!-- Ejercicio -->
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio00.php">
-                                <h3 class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO"></h3>
                                 <div class="service">
                                     <div class="listing_image">
                                         <div class="listing_image_container">
@@ -115,7 +114,8 @@
                                     <a href="mostrarcodigo/muestraEjercicio00.php">
                                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="service_title">
-                                                <h3>EJERCICIO 00</h3>
+                                                <h3 >EJERCICIO 00</h3>
+                                                <h3 class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO"></h3>
                                             </div>
                                         </div>
                                     </a>
