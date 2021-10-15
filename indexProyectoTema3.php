@@ -126,14 +126,14 @@
 
                         <!-- Ejercicio -->
                         <div class="col-xl-4 col-md-6">
-                            <a href="">
+                            <a href="codigoPHP/ejercicio01.php">
                                 <div class="service">
                                     <div class="listing_image">
                                         <div class="listing_image_container">
                                             <img src="webroot/media/img/cat.jpeg" alt="">
                                         </div>
                                     </div>
-                                    <a href="../index.php">
+                                    <a href="mostrarcodigo/muestraEjercicio01.php">
                                         <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                             <div class="service_title">
                                                 <h3>EJERCICIO 01</h3>
