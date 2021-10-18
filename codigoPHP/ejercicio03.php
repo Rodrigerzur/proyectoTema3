@@ -22,13 +22,14 @@ and open the template in the editor.
         echo nl2br("\n");
         #si queremos que aparezcan los nombres de los dias, en español, etc
         ##cambiamos la localidad a españa para que cambie el idioma
-        setlocale(LC_TIME, 'es_ES', 'Spanish_Spain', 'Spanish'); 
+        setlocale(LC_ALL, 'es_ES', 'Spanish_Spain', 'Spanish'); 
         #creamos otro objeto fecha y lo pasamos a string para formatearlo
         $fecha2 = new DateTime(null, new DateTimeZone('Europe/Madrid'));
-        $resultado = $fecha2->format('l-d-m-Y H:i:s');
+        $resultado = $fecha2->format('d-m-Y H:i:s');
+        $fecha2=date_create($resultado);
         #utilizamos strftime al mostrarlo para que aparezca como queremos
         echo nl2br("La fecha formateada a español es \n");
-        echo strftime('%A %d de %b de %Y',strtotime($resultado));
+        echo strftime('%A %d de %B de %Y', strtotime($resultado));
         ?>
     </body>
 </html>

@@ -18,7 +18,20 @@ and open the template in the editor.
             Y ME ENCANTA PHP
                 
             QUE BONITO EL EJERCICIO
+                
+                
             HEREDOC);
+        
+        
+        $sql = <<<"HEREDOC"
+                USE AdventureWorks2012;
+                GO
+                SELECT *
+                FROM Production.Product
+                ORDER BY Name ASC;
+                HEREDOC;
+        
+        echo $sql;
         #si hacemos echo nl2br se pueden meter saltos de linea con \n Y haciendolo naturalmente como en un documento de texto
         ?>
     </body>
