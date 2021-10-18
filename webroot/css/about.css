@@ -612,7 +612,7 @@ Los ejercicios
 .service
 {
     background: #ffffff;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-left: 30px;
     padding-right: 15px;
     padding-bottom: 25px;
@@ -642,6 +642,9 @@ Los ejercicios
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
+.listing_image_container h3{
+    font-size:18px;
+}
 .service:hover::after
 {
     visibility: visible;
@@ -656,19 +659,36 @@ Los ejercicios
     padding-left: 15px;
 }
 .service_title_container:hover{
-    
+
 }
-.mostrarcodigo{
+.mostrarejercicio{
     position: relative;
+    padding-top: 10px;
 }
-.mostrarcodigo:before{
-    opacity:0.15;
+.mostrarejercicio:before{
+    opacity:0.25;
     content:attr(data-hover);
     transition: opacity 300ms ease-in-out;
     z-index:1;
     top:100%;
     font-weight: bold;
-    color:#2b2e35;
+    color:green;
+}
+.mostrarejercicio:hover:before{
+    opacity:1;
+    visibility: visible;
+}
+.mostrarcodigo{
+    position: relative;
+    padding-top: 10px;
+}
+.mostrarcodigo:before{
+    opacity:0.20;
+    content:attr(data-hover);
+    transition: opacity 300ms ease-in-out;
+    z-index:1;
+    top:100%;
+    font-weight: bold;
     color:red;
 }
 .mostrarcodigo:hover:before{

@@ -106,9 +106,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio00.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Hola mundo y phpinfo()</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Hola mundo y phpinfo()</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio00.php">
@@ -128,10 +130,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio01.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Inicializar variables de los distintos tipos de datos básicos(string, int, float, bool) y mostrar los datos por pantalla (echo, print, printf, print_r,
-                                                var_dump).</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Inicializar variables de los distintos tipos de datos básicos(string, int, float, bool) y mostrar los datos por pantalla (echo, print, printf, print_r,
+                                                    var_dump).</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio01.php">
@@ -151,9 +155,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio02.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Inicializar y mostrar una variable heredoc.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Inicializar y mostrar una variable heredoc.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio02.php">
@@ -173,10 +179,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio03.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar en tu página index la fecha y hora actual formateada en castellano. (Utilizar cuando sea posible la clase DateTime)
-                                            </h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar en tu página index la fecha y hora actual formateada en castellano. (Utilizar cuando sea posible la clase DateTime)
+                                                </h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio03.php">
@@ -196,9 +204,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio04.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar en tu página index la fecha y hora actual en Oporto formateada en portugués</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar en tu página index la fecha y hora actual en Oporto formateada en portugués</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio04.php">
@@ -218,10 +228,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio05.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)
-                                            </h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Inicializar y mostrar una variable que tiene una marca de tiempo (timestamp)
+                                                </h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio05.php">
@@ -241,9 +253,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio06.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Operar con fechas: calcular la fecha y el día de la semana de dentro de 60 días.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio06.php">
@@ -263,9 +277,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio07.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar el nombre del fichero que se está ejecutando.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar el nombre del fichero que se está ejecutando.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio07.php">
@@ -285,9 +301,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio08.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar la dirección IP del equipo desde el que estás accediendo.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar la dirección IP del equipo desde el que estás accediendo.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio08.php">
@@ -307,9 +325,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio09.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar el path donde se encuentra el fichero que se está ejecutando</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar el path donde se encuentra el fichero que se está ejecutando</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio09.php">
@@ -329,9 +349,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio10.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>  Mostrar el contenido del fichero que se está ejecutando.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>  Mostrar el contenido del fichero que se está ejecutando.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio10.php">
@@ -351,9 +373,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio11.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar el documento PHPDoc del proyecto que se está ejecutando generado con PHP Documentor o ApiGen.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar el documento PHPDoc del proyecto que se está ejecutando generado con PHP Documentor o ApiGen.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio11.php">
@@ -373,9 +397,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio12.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Mostrar el contenido de las variables superglobales (utilizando print_r() y foreach()).</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio12.php">
@@ -395,9 +421,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio13.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Crear una función que cuente el número de visitas a la página actual desde una fecha concreta</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Crear una función que cuente el número de visitas a la página actual desde una fecha concreta</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio13.php">
@@ -417,10 +445,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio14.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3> Comprobar las librerías que estás utilizando en tu entorno de desarrollo y explotación. Crear tu propia librería de funciones y estudiar la
-                                                forma de usarla en el entorno de desarrollo y en el de explotación.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3> Comprobar las librerías que estás utilizando en tu entorno de desarrollo y explotación. Crear tu propia librería de funciones y estudiar la
+                                                    forma de usarla en el entorno de desarrollo y en el de explotación.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio14.php">
@@ -440,10 +470,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio15.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la
-                                                semana. (Array asociativo con los nombres de los días de la semana).</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Crear e inicializar un array con el sueldo percibido de lunes a domingo. Recorrer el array para calcular el sueldo percibido durante la
+                                                    semana. (Array asociativo con los nombres de los días de la semana).</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio15.php">
@@ -463,9 +495,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio16.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Recorrer el array anterior utilizando funciones para obtener el mismo resultado.</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio16.php">
@@ -485,12 +519,14 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio17.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
-                                                asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
-                                                distintas técnicas para mostrar los asientos ocupados y las personas que los ocupan.
-                                            </h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Inicializar un array (bidimensional con dos índices numéricos) donde almacenamos el nombre de las personas que tienen reservado el
+                                                    asiento en un teatro de 20 filas y 15 asientos por fila. (Inicializamos el array ocupando únicamente 5 asientos). Recorrer el array con
+                                                    distintas técnicas para mostrar los asientos ocupados y las personas que los ocupan.
+                                                </h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio17.php">
@@ -510,9 +546,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio18.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Recorrer el array anterior utilizando funciones para obtener el mismo resultado</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Recorrer el array anterior utilizando funciones para obtener el mismo resultado</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio18.php">
@@ -532,10 +570,12 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio19.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3> Construir una librería de funciones de validación de campos de formularios para utilizarla en los
-                                                siguientes ejercicios. Discusión: diferencia entre librería de funciones y clase</h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3> Construir una librería de funciones de validación de campos de formularios para utilizarla en los
+                                                    siguientes ejercicios. Discusión: diferencia entre librería de funciones y clase</h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio19.php">
@@ -555,9 +595,11 @@
                         <div class="col-xl-4 col-md-6">
                             <a href="codigoPHP/ejercicio20.php">
                                 <div class="service">
-                                    <div class="listing_image">
-                                        <div class="listing_image_container">
-                                            <h3>Convertir la Libreria anterior en una clase </h3>
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Convertir la Libreria anterior en una clase </h3>
+                                            </div>
                                         </div>
                                     </div>
                                     <a href="mostrarcodigo/muestraEjercicio20.php">
@@ -565,6 +607,159 @@
                                             <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
                                                 <div class="service_title">
                                                     <h3 >EJERCICIO 20</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio21.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3> Construir un formulario para recoger un cuestionario realizado a una persona y enviarlo a una página Tratamiento.php para que muestre
+                                                    las preguntas y las respuestas recogidas.
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio21.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 21</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio22.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                                                    recogidas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio22.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 22</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio23.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                                                    recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente.
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio23.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 23</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio24.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3> Construir un formulario para recoger un cuestionario realizado a una persona y mostrar en la misma página las preguntas y las respuestas
+                                                    recogidas; en el caso de que alguna respuesta esté vacía o errónea volverá a salir el formulario con el mensaje correspondiente, pero las
+                                                    respuestas que habíamos tecleado correctamente aparecerán en el formulario y no tendremos que volver a teclearlas.
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio24.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 24</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio25.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Trabajar en PlantillaFormulario.php mi plantilla para hacer formularios como churros.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio25.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 25</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Ejercicio -->
+                        <div class="col-xl-4 col-md-6">
+                            <a href="codigoPHP/ejercicio26.php">
+                                <div class="service">
+                                    <div class="mostrarejercicio" data-hover="MOSTRAR EL EJERCICIO">
+                                        <div class="listing_image">
+                                            <div class="listing_image_container">
+                                                <h3>Probar la plantilla anterior desarrollando un formulario que recoja la temperatura y la presión atmosférica en una serie de fechas y (cuando
+                                                    el usuario lo decida) genere un informe con los datos recibidos y un promedios, mínimos y máximos de temperatura y presión atmosférica</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="mostrarcodigo/muestraEjercicio26.php">
+                                        <div class="mostrarcodigo" data-hover="MOSTRAR EL CODIGO">
+                                            <div class="service_title_container d-flex flex-row align-items-center justify-content-start">
+                                                <div class="service_title">
+                                                    <h3 >EJERCICIO 26</h3>
                                                 </div>
                                             </div>
                                         </div>
