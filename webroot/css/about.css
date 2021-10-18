@@ -664,15 +664,11 @@ Los ejercicios
 .mostrarcodigo:before{
     opacity:0;
     content:attr(data-hover);
-    transition: opacity 400ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
     z-index:1;
     top:100%;
-    
     font-weight: bold;
-    
-    
     color:#2b2e35;
-    
 }
 .mostrarcodigo:hover:before{
     opacity:1;

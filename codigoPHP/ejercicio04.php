@@ -28,6 +28,7 @@ and open the template in the editor.
         #utilizamos strftime al mostrarlo para que aparezca como queremos
         echo nl2br("La fecha formateada a portugues es \n");
         echo strftime('%A %d de %B de %Y',strtotime($resultado));
+        setlocale(LC_ALL, 'es_ES', 'Spanish_Spain', 'Spanish'); 
         ?>
     </body>
 </html>

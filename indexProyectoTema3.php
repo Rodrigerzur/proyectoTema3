@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>indexProyectoTema3</title>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="description" content="ejercicios DWES">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="webroot/css/bootstrap-4.1.2/bootstrap.min.css">
@@ -25,7 +25,7 @@
                                 <span>Rodrigo Geras</span>
                             </li>
                             <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div><img src="webroot/media/img/envelope.svg" alt=""></div>
+                                <div><img src="webroot/media/img/cat.jpeg" alt=""></div>
                                 <span>Rodrigo.gerzur@educa.jcyl.es</span>	
                             </li>
                             <div class="github">
@@ -39,7 +39,7 @@
 
                 <!-- Navegador -->
                 <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                    <div class="logo"><a href="#"><span>MENÃš</span></a></div>
+                    <div class="logo"><a href="#"><span>MENÚ</span></a></div>
                     <nav class="main_nav">
                         <ul class="d-flex flex-row align-items-start justify-content-start">
                             <li><a href="../index.php">Inicio</a></li>
@@ -96,7 +96,7 @@
                         <div class="col">
                             <div class="section_title_container text-center">
                                 <div class="section_subtitle">EJERCICIOS DEL</div>
-                                <div class="section_title"><h1>TEMA 3</h1></div>
+                                <div class="section_title"><h1>TEMA 3: CARACTERÍSTICAS DEL LENGUAJE PHP</h1></div>
                             </div>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
                             <div class="col">
                                 <div class="footer_bar_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
                                     <div class="copyright order-md-1 order-2">
-                                        2021-2022 Rodrigo Geras ZurrÃ³n</div>
+                                        2021-2022 Rodrigo Geras Zurrón</div>
                                     <nav class="footer_nav order-md-2 order-1 ml-md-auto">
                                         <ul class="d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
                                             <li><a href="../index.php">Inicio</a></li>				
