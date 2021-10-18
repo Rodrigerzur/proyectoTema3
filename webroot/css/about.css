@@ -662,13 +662,14 @@ Los ejercicios
     position: relative;
 }
 .mostrarcodigo:before{
-    opacity:0;
+    opacity:0.15;
     content:attr(data-hover);
     transition: opacity 300ms ease-in-out;
     z-index:1;
     top:100%;
     font-weight: bold;
     color:#2b2e35;
+    color:red;
 }
 .mostrarcodigo:hover:before{
     opacity:1;
