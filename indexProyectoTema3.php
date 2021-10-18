@@ -25,7 +25,7 @@
                                 <span>Rodrigo Geras</span>
                             </li>
                             <li class="d-flex flex-row align-items-center justify-content-start">
-                                <div><img src="webroot/media/img/cat.jpeg" alt=""></div>
+                                <div><img src="" alt=""></div>
                                 <span>Rodrigo.gerzur@educa.jcyl.es</span>	
                             </li>
                             <div class="github">
