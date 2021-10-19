@@ -12,24 +12,26 @@ and open the template in the editor.
     <body>
         <?php
         #creando una nuevo objeto datetime y fijamos la zona a madrid
-        $fechaHora = new DateTime(null, new DateTimeZone('Europe/Madrid'));
+        $oFechaHora = new DateTime(null, new DateTimeZone('Europe/Madrid'));
         
         #Le damos el formato local antes de mostrarla
-        echo nl2br("La fecha y hora actual en Madrid es \n");
-        echo $fechaHora->format('d-m-Y H:i:s');
+        echo "La fecha y hora actual en Madrid es </br>";
+        echo $oFechaHora->format('d-m-Y H:i:s');
         
-        echo nl2br("\n");
-        echo nl2br("\n");
+        echo '</br></br>';
         #si queremos que aparezcan los nombres de los dias, en español, etc
         ##cambiamos la localidad a españa para que cambie el idioma
         setlocale(LC_ALL, 'es_ES', 'Spanish_Spain', 'Spanish'); 
         #creamos otro objeto fecha y lo pasamos a string para formatearlo
-        $fecha2 = new DateTime(null, new DateTimeZone('Europe/Madrid'));
-        $resultado = $fecha2->format('d-m-Y H:i:s');
-        $fecha2=date_create($resultado);
+        $oResultado = $oFechaHora->format('d-m-Y H:i:s');
+        
         #utilizamos strftime al mostrarlo para que aparezca como queremos
-        echo nl2br("La fecha formateada a español es \n");
-        echo strftime('%A %d de %B de %Y', strtotime($resultado));
+        echo "La fecha formateada a español es ".strftime('%A %d de %B de %Y', strtotime($oResultado))."</br></br>";
+        echo "La fecha formateada a español (solo el año) es ".strftime('%Y', strtotime($oResultado))."</br></br>";
+        echo "La fecha formateada a español (solo el dia de la semana) es ".strftime('%A', strtotime($oResultado))."</br></br>";
+        echo "La fecha formateada a español (solo el tiempo) es ".$oFechaHora->format('H:i:s')."</br></br>";
+        echo "La fecha formateada a español (solo el timestamp) es ".$oFechaHora->getTimestamp()."</br></br>";
+        echo "<p>La fecha actual sumando 30 dias es ".$oResultado->add(date_interval_create_from_date_string('30 days'));
         ?>
     </body>
 </html>

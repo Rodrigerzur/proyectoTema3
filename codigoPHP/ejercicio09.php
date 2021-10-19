@@ -13,8 +13,7 @@ and open the template in the editor.
         <?php
         #el nombre y la ruta ATENCION: netbeans marca que no es recomendable usar esto
             $nombreFichero= $_SERVER['PHP_SELF'];
-            echo 'La ruta del archivo que se esta ejecutando es ';
-            echo $nombreFichero; 
+            echo 'La ruta del archivo que se esta ejecutando es '.$nombreFichero; 
         ?>
     </body>
 </html>
