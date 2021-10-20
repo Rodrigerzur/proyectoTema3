@@ -12,23 +12,25 @@ and open the template in the editor.
     <body>
         <?php
         #creando una nuevo objeto datetime y fijamos la zona a Portugal
-        $fechaHora = new DateTime(null, new DateTimeZone('Europe/Lisbon'));
+        $oFechaHoraActual = new DateTime(null, new DateTimeZone('Europe/Lisbon'));
         
         #Le damos el formato local antes de mostrarla
-        echo nl2br("La fecha y hora actual en Oporto es \n");
-        echo $fechaHora->format('d-m-Y H:i:s');
+        echo "La fecha y hora actual en Oporto es </br>";
+        echo $oFechaHoraActual->format('d-m-Y H:i:s');
         
-        echo nl2br("\n \n");
+        echo '</br></br>';
         #si queremos que aparezcan los nombres de los dias ..., en portugues, etc
         ##cambiamos la localidad a portugal para que cambie el idioma
         setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese'); 
-        #creamos otro objeto fecha y lo pasamos a string para formatearlo
-        $fecha2 = new DateTime(null, new DateTimeZone('Europe/Lisbon'));
-        $resultado = $fecha2->format('d-m-Y H:i:s');
+        
         #utilizamos strftime al mostrarlo para que aparezca como queremos
-        echo nl2br("La fecha formateada a portugues es \n");
-        echo strftime('%A %d de %B de %Y',strtotime($resultado));
-        setlocale(LC_ALL, 'es_ES', 'Spanish_Spain', 'Spanish'); 
+        echo "La fecha formateada a español es ".strftime('%A %d de %B de %Y', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el año) es ".strftime('%Y', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el dia de la semana) es ".strftime('%A', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el tiempo) es ".$oFechaHoraActual->format('H:i:s')."</br></br>";
+        echo "La fecha formateada a español (solo el timestamp) es ".$oFechaHoraActual->getTimestamp()."</br></br>";
+        echo "<p>La fecha actual sumando 30 dias es ".$oFechaHoraActual->modify('+ 30 days')->format('d-m-Y H:i:s');
+        echo "<p>La fecha actual restando 30 dias es ".$oFechaHoraActual->modify('- 60 days')->format('d-m-Y H:i:s');
         ?>
     </body>
 </html>

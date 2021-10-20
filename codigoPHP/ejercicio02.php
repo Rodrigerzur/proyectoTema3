@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         #se pueden usar comillas dobles desde PHP 5.3.0
-        echo nl2br( <<<"HEREDOC"
+        echo  <<<"HEREDOC"
             ¡Hola Mundo!
             SOY RODRIGO \n
             Y ME ENCANTA PHP
@@ -20,7 +20,7 @@ and open the template in the editor.
             QUE BONITO EL EJERCICIO
                 
                 
-            HEREDOC);
+            HEREDOC;
         
         
         $sql = <<<"HEREDOC"

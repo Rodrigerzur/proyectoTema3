@@ -15,11 +15,9 @@ and open the template in the editor.
             echo 'El archivo en ejecucion actual es ';
             echo basename(__FILE__);
             
-            echo nl2br("\n");
-            echo nl2br("\n");
+            echo '</br></br>';
             #el nombre y la ruta ATENCION: netbeans marca que no es recomendable usar esto
-            $nombreFichero= $_SERVER['PHP_SELF'];
-            echo $nombreFichero; 
+            echo  $_SERVER['PHP_SELF'];
         ?>
     </body>
 </html>

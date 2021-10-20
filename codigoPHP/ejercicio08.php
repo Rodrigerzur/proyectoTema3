@@ -15,10 +15,8 @@ and open the template in the editor.
         echo getHostByName(getHostName());
         #He usado esta en vez de $_SERVER['SERVER_ADDR'] porque un pc puede tener varias ip Y esta muestra la del host virtual que se esta utilizando
         #ademas acceder a variables superglobales da advertencia 
-        echo nl2br("\n");
-        echo nl2br("\n");
-        
-        echo $_SERVER['_ADDR'];
+        echo '</br></br>';
+        echo $_SERVER['SERVER_ADDR'];
         ?>
     </body>
 </html>

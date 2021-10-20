@@ -12,26 +12,37 @@ and open the template in the editor.
     <body>
         <?php
         #creando una nuevo objeto datetime y fijamos la zona a madrid
-        $oFechaHora = new DateTime(null, new DateTimeZone('Europe/Madrid'));
+        $oFechaHoraActual = new DateTime(null, new DateTimeZone('Europe/Madrid'));
         
         #Le damos el formato local antes de mostrarla
         echo "La fecha y hora actual en Madrid es </br>";
-        echo $oFechaHora->format('d-m-Y H:i:s');
+        echo $oFechaHoraActual->format('d-m-Y H:i:s');
         
         echo '</br></br>';
         #si queremos que aparezcan los nombres de los dias, en español, etc
         ##cambiamos la localidad a españa para que cambie el idioma
-        setlocale(LC_ALL, 'es_ES', 'Spanish_Spain', 'Spanish'); 
-        #creamos otro objeto fecha y lo pasamos a string para formatearlo
-        $oResultado = $oFechaHora->format('d-m-Y H:i:s');
+        setlocale(LC_ALL, 'es_ES.utf-8 ', 'Spanish_Spain.utf-8', 'Spanish');
         
         #utilizamos strftime al mostrarlo para que aparezca como queremos
-        echo "La fecha formateada a español es ".strftime('%A %d de %B de %Y', strtotime($oResultado))."</br></br>";
-        echo "La fecha formateada a español (solo el año) es ".strftime('%Y', strtotime($oResultado))."</br></br>";
-        echo "La fecha formateada a español (solo el dia de la semana) es ".strftime('%A', strtotime($oResultado))."</br></br>";
-        echo "La fecha formateada a español (solo el tiempo) es ".$oFechaHora->format('H:i:s')."</br></br>";
-        echo "La fecha formateada a español (solo el timestamp) es ".$oFechaHora->getTimestamp()."</br></br>";
-        echo "<p>La fecha actual sumando 30 dias es ".$oResultado->add(date_interval_create_from_date_string('30 days'));
+        echo "La fecha formateada a español es ".strftime('%A %d de %B de %Y', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el año) es ".strftime('%Y', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el dia de la semana) es ".strftime('%A', strtotime($oFechaHoraActual->format('d-m-Y H:i:s')))."</br></br>";
+        echo "La fecha formateada a español (solo el tiempo) es ".$oFechaHoraActual->format('H:i:s')."</br></br>";
+        echo "La fecha formateada a español (solo el timestamp) es ".$oFechaHoraActual->getTimestamp()."</br></br>";
+        echo "<p>La fecha actual sumando 30 dias es ".$oFechaHoraActual->modify('+ 30 days')->format('d-m-Y H:i:s');
+        echo "<p>La fecha actual restando 30 dias es ".$oFechaHoraActual->modify('- 60 days')->format('d-m-Y H:i:s');
+        
+        echo '</br></br>';
+        #en marruecos
+        $oFechaHoraActualMarruecos = new DateTime(null, new DateTimeZone('Africa/Casablanca'));
+        echo "La fecha y hora actual en Casablanca es </br>";
+        echo $oFechaHoraActualMarruecos->format('d-m-Y H:i:s');
+        
+        echo '</br></br>';
+        #en arabe seria 
+        #si quisieramos el idioma en arabe setlocale(LC_ALL, 'ar_MA', 'ar_MA.utf-8', 'ar_MA.utf8', 'ar');
+        echo "La fecha formateada a arabe es ".strftime('%A %d de %B de %Y', strtotime($oFechaHoraActualMarruecos->format('d-m-Y H:i:s')))."</br></br>";
+        
         ?>
     </body>
 </html>
