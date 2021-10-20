@@ -8,12 +8,19 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Ejercicio05.php</title>
+        <style>
+            .respuesta{
+                font-weight: bold;
+                font-size:22px;
+                color:green;
+            }
+        </style>
     </head>
     <body>
         <?php
             
             $fechaStamp = new DateTime();
-            echo "El valor del timeStamp de la variable fecha que cree es ".$fechaStamp->getTimestamp();
+            echo 'El valor del timeStamp de la variable fecha que cree es <span class="respuesta">'.$fechaStamp->getTimestamp().'</span>';
         ?>
     </body>
 </html>

@@ -8,16 +8,23 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>ejercicio07</title>
+        <style>
+            .respuesta{
+                font-weight: bold;
+                font-size:22px;
+                color:green;
+            }
+        </style>
     </head>
     <body>
         <?php
            #Solo el nombre del archivo actual
             echo 'El archivo en ejecucion actual es ';
-            echo basename(__FILE__);
+            echo '<span class="respuesta">'.basename(__FILE__).'</span>';
             
             echo '</br></br>';
             #el nombre y la ruta ATENCION: netbeans marca que no es recomendable usar esto
-            echo  $_SERVER['PHP_SELF'];
+            echo  '<span class="respuesta">'.$_SERVER['PHP_SELF'].'</span>';
         ?>
     </body>
 </html>

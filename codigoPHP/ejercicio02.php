@@ -8,21 +8,17 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>ejercicio02.php</title>
+        <style>
+            .respuesta{
+                font-weight: bold;
+                font-size:22px;
+                color:green;
+            }
+        </style>
     </head>
     <body>
         <?php
         #se pueden usar comillas dobles desde PHP 5.3.0
-        echo  <<<"HEREDOC"
-            ¡Hola Mundo!
-            SOY RODRIGO \n
-            Y ME ENCANTA PHP
-                
-            QUE BONITO EL EJERCICIO
-                
-                
-            HEREDOC;
-        
-        
         $sql = <<<"HEREDOC"
                 USE AdventureWorks2012;
                 GO
@@ -31,7 +27,7 @@ and open the template in the editor.
                 ORDER BY Name ASC;
                 HEREDOC;
         
-        echo $sql;
+        echo '<span class="respuesta">'.$sql.'</span>';
         #si hacemos echo nl2br se pueden meter saltos de linea con \n Y haciendolo naturalmente como en un documento de texto
         ?>
     </body>

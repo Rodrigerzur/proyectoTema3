@@ -8,6 +8,13 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Ejercicio09.php</title>
+        <style>
+            .respuesta{
+                font-weight: bold;
+                font-size:22px;
+                color:green;
+            }
+        </style>
     </head>
     <body>
         <?php
