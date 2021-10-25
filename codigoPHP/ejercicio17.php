@@ -39,7 +39,7 @@ and open the template in the editor.
         }
 
         foreach ($aTeatro as $fila) {
-            echo "<br><b>ASIENTO OCUPADO EN</b><br>";
+            echo '<br><b>ASIENTO OCUPADO EN </b><br>';
             foreach ($fila as $columna => $value) {
                 echo '<span class="respuesta">Columna '.$columna.  ' Por '. $value. '</span><br>';
             }
