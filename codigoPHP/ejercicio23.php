@@ -28,14 +28,14 @@ and open the template in the editor.
             /*
              * Registro de errores.
              */
-            $aErrores = [];
+            $aErrores = [vacio=>'EL CAMPO ESTA VACIO',
+                incorrecto=>'el valor es incorrecto'];
             
             //Recogida de los datos introducidos.
             $sName = $_REQUEST['modelo'];
 
             /*
              * Validación del nombre. 
-           ¡
              */
             if(validacionFormularios::comprobarAlfabetico($_REQUEST["modelo"], 300, 3) != null){
                 $bEntradaOK = false;
@@ -43,10 +43,7 @@ and open the template in the editor.
             }
             
         } else {
-            /* 
-             * Dado que el formulario aún no se ha enviaddo, la entrada todavía
-             * no está validada.
-             */
+         
             $bEntradaOK = false;
         }
         if ($bEntradaOK) {#Si todas las variables son correcta
@@ -62,7 +59,7 @@ and open the template in the editor.
             echo 
                 '</pre>
                 </p>';
-        } else {//Código que se ejecuta antes de rellenar el formulario
+        } else {//Código que se ejecuta antes de rellenar el formulario o cuando el formulario es incorrecto
             echo
             '<h2>Preguntas del formulario</h2>
                 <form action="#" method="post">

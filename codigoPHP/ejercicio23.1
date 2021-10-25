@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ejercicio23.php</title>
+        <style>
+            .respuesta{
+                font-weight: bold;
+                font-size:22px;
+                color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <?php
+        
+        if (!empty($_REQUEST['nombre'])){
+            $nombre=$_REQUEST['nombre'];
+            
+            print_r('El nombre es: '.$nombre);
+            
+            print_r($_REQUEST);
+        
+        }else{
+       ?>
+            
+            <h2>Preguntas del formulario</h2>
+                <form action="#" method="post">
+                    <fieldset><legend style="border: 1px solid black; background-color: white">Nombre</legend>
+                            <label for="LblNombre">Nombre</label>
+                            <input type="text" name="nombre" placeholder="Introduce nombre" id="LblNombre">
+                        <?php
+                        if(isset($_REQUEST['Enviar']) && empty($_REQUEST['nombre'])){
+                            echo '<span style="color:red"> No puede estar en blanco </span>';
+                        }
+                        ?>
+                    </fieldset> 
+                        </br>
+                    <input type="submit" value="Enviar" name="Enviar">
+                    <input type="reset" value="Borrar" name="Borrar">
+                </form>
+            <?php
+        }
+        ?>
+    </body>
+</html>

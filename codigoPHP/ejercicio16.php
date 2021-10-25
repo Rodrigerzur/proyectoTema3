@@ -42,10 +42,15 @@ and open the template in the editor.
         }while(key($aSueldo)!=null);
         #EACH esta declarado obsoleto a partir de php 7.2.0 SE RECOMIENDA NO USARLO
         
+        reset($aSueldo);
         #en caso de que el array no tenga ningun elemento
-       /* while(){
-            
-        }*/
+        while(key($aSueldo)!=null){
+            echo 'El dia de la semana es <span class="respuesta">'.key($aSueldo).'</span></br>';
+            #KEY devuelve el valor clave de donde se encuentre el puntero en ese momento
+            echo 'El sueldo de ese dia es <span class="respuesta">'.current($aSueldo).'€</span></br>';
+            #Current devuelve el valor de donde se encuentre el puntero 
+            next($aSueldo);
+        }
         ?>
     </body>
 </html>
