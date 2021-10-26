@@ -54,11 +54,12 @@ and open the template in the editor.
                 }
             }
         }
-
+        $contador = 0;
         foreach ($aTeatro as $fila) {
-            echo '<br><b>ASIENTO OCUPADO EN </b><br>';
+           $contador++;
             foreach ($fila as $columna => $value) {
-                if(isset($value)){
+                if(isset($value)){ 
+                    echo '<br><b>ASIENTO OCUPADO EN FILA '.$contador.'</b><br>';
                 echo '<span class="respuesta">Columna '.$columna.  ' Por '. $value. '</span><br>';
                 }
             }
