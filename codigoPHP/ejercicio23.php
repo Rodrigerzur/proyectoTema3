@@ -18,7 +18,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        
+        $sName = null;
         include '../core/210322ValidacionFormularios.php';
         if (isset($_REQUEST['Enviar'])) {
             /*
@@ -28,8 +28,8 @@ and open the template in the editor.
             /*
              * Registro de errores.
              */
-            $aErrores = [vacio=>'EL CAMPO ESTA VACIO',
-                incorrecto=>'el valor es incorrecto'];
+            $aErrores = ['vacio'=>'EL CAMPO ESTA VACIO',
+                'incorrecto'=>'el valor es incorrecto'];
             
             //Recogida de los datos introducidos.
             $sName = $_REQUEST['modelo'];
@@ -66,7 +66,7 @@ and open the template in the editor.
                     <fieldset>
                         <legend style="border: 1px solid black; background-color: white">Nombre</legend>
                         <label for="LblModelo">Nombre</label>
-                        <input type="text" name="modelo" placeholder="Introduce nombre" id="LblModelo">
+                        <input type="text" name="modelo" placeholder="Introduce nombre" id="LblModelo" value="'.$sName.'">
                     </fieldset> 
                         </br>
                     <input type="submit" value="Enviar" name="Enviar">
