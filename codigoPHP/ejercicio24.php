@@ -15,9 +15,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio24.php</title>
         <style>
+            h2{
+                font-family: sans-serif;
+                font-size:2em;
+                font-weight: bold;
+                color:Blue;
+                border-bottom: 5px solid blue;
+                
+                
+            }
             span{
                 color:red;
                 font-weight: bold;
+            }
+            fieldset{
+               
+                width: 70%;
+                background-color: rgba(45, 23, 143, 0.17);
+                color:green;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size:1.2em;
+                padding:20px;
+                text-align: justify;
+                border:5px solid black;
+            }
+            fieldset legend{
+                color:Red;
+                font-size: 1.5em;
+                padding:5px;
+                margin: auto;
+            }
+            fieldset input{
+                background-color: white;
+                padding: 0.3rem;
             }
         </style>
     </head>
@@ -30,6 +61,9 @@ require_once '../core/210322ValidacionFormularios.php';
 define('OBLIGATORIO', 1);
 define('OPCIONAL', 0);
 
+$aListaRadio =['Andando','En coche'];
+$aListaCheckbox = ['comida','cena'];
+
 $aErrores = ["sNombre" => null,
     "iAltura" => null,
     "iTelefono" => null,
@@ -41,7 +75,10 @@ $aErrores = ["sNombre" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
-    "acom" => null];
+    "acom" => null,
+    "sMessage" => null,
+    "desplazamiento"=>null,
+    "comidas" => null];
 
 //Varible de entrada correcta inicializada a true
 $entradaOK = true;
@@ -57,7 +94,10 @@ $aRespuestas = ["sNombre" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
-    "acom" => null];
+    "acom" => null,
+    "sMessage" => null,
+    "desplazamiento" =>null,
+    "comidas"=> null];
 //comprobar si ha pulsado el button enviar 
 if (isset($_REQUEST['Enviar'])) {
 
@@ -72,6 +112,11 @@ if (isset($_REQUEST['Enviar'])) {
     $aErrores["email"] = validacionFormularios::validarEmail($_REQUEST['email'], OBLIGATORIO);
     $aErrores["sUrl"] = validacionFormularios::validarURL($_REQUEST['sUrl'], OBLIGATORIO);
     $aErrores["sPasswd"] = validacionFormularios::validarPassword($_REQUEST['sPasswd'], $maximo = 16, $minimo = 2, $tipo = 3, OBLIGATORIO);
+    $aErrores["acom"] = validacionFormularios::comprobarNoVacio($_REQUEST)['acom'];
+    $aErrores["sMessage"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['sMessage'], $maxTamanio = 1000, $minTamanio = 1, OBLIGATORIO);
+    $aErrores["desplazamiento"]=validacionFormularios::validarElementoEnLista($_REQUEST['desplazamiento'], $aListaRadio);
+    $aErrores["comidas"] = validacionFormularios::validarElementoEnLista($_REQUEST['comidas'], $aListaCheckbox);
+
     #$aErrores['hora'] = validacionFormularios::;
 
     foreach ($aErrores as $campos => $value) {
@@ -97,7 +142,10 @@ if ($entradaOK) {
         "email" => $_REQUEST['email'],
         "sUrl" => $_REQUEST['sUrl'],
         "sPasswd" => $_REQUEST['sPasswd'],
-        "acom" => $_REQUEST['acom']];
+        "acom" => $_REQUEST['acom'],
+        "sMessage" => $_REQUEST['sMessage'],
+        "desplazamiento" => $_REQUEST['desplazamiento'],
+        "comidas" => $_REQUEST['comidas']];
     //Mostrar datos
 
     echo "Nombre: " . $aRespuestas['sNombre'] . "<br>";
@@ -111,13 +159,16 @@ if ($entradaOK) {
     echo "Su email es " . $aRespuestas['email'] . "<br>";
     echo "Su pagina web es " . $aRespuestas['sUrl'] . "<br>";
     echo "Su contraseña es " . $aRespuestas['sPasswd'] . "<br>";
-    echo "Vendra al evento ". $aRespuestas['acom']. "<br>";
+    echo "Vendra al evento " . $aRespuestas['acom'] . "<br>";
+    echo "Observaciones: " . $aRespuestas['sMessage'] . "<br>";
+    echo "Usted vendra ".$aRespuestas['desplazamiento']."<br>";
+    echo "Usted asistira a las siguientes comidas ".$aRespuestas['comidas']."<br>";
 } else {
     ?>
     <h2>Datos Del Primer Asistente</h2>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
         <fieldset>
-            <legend style="border: 1px solid black; background-color: white">Campos Obligatorio</legend>
+            <legend style="border: 1px solid black; background-color: white">Campos Obligatorios</legend>
             <label for="LblsNombre">Nombre</label>
             <input type="text" name="sNombre" placeholder="Jose" id="LblsNombre" value="<?php
             if (isset($_REQUEST['sNombre'])) {
@@ -129,7 +180,9 @@ if ($entradaOK) {
                            echo $aErrores['sNombre'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LbliAltura">Altura</label>
             <input type="text" name="iAltura" placeholder="184" id="LbliAltura" value="<?php
             if (isset($_REQUEST['iAltura'])) {
@@ -153,7 +206,9 @@ if ($entradaOK) {
                            echo $aErrores['iTelefono'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblCp">CODIGO POSTAL</label>
             <input type="text" name="cp" placeholder="49600" id="LblCp" value="<?php
             if (isset($_REQUEST['cp'])) {
@@ -165,7 +220,9 @@ if ($entradaOK) {
                            echo $aErrores['cp'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblDireccion">DIRECCION</label>
             <input type="text" name="direccion" placeholder="Av. Federico Silva, 48" id="LblDireccion" value="<?php
             if (isset($_REQUEST['direccion'])) {
@@ -177,7 +234,9 @@ if ($entradaOK) {
                            echo $aErrores['direccion'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblDonacion">DONACION</label>
             <input type="text" name="donacion" placeholder="47.5" id="LblDonacion" value="<?php
             if (isset($_REQUEST['donacion'])) {
@@ -201,7 +260,9 @@ if ($entradaOK) {
                            echo $aErrores['fecha'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblHora">Hora estimada de asistencia</label>
             <input type="time" name="HORA" id="LblHora" value="<?php
             if (isset($_REQUEST['hora'])) {
@@ -225,7 +286,9 @@ if ($entradaOK) {
                            echo $aErrores['email'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblsPasswd">Contraseña para registrarte</label>
             <input type="password" name="sPasswd" id="LblsPasswd" placeholder="*******" value="<?php
             if (isset($_REQUEST['sPasswd'])) {
@@ -237,7 +300,9 @@ if ($entradaOK) {
                            echo $aErrores['sPasswd'];
                        }
                        ?></span>
+            
             </br></br>
+            
             <label for="LblsUrl">Pagina web</label>
             <input type="text" name="sUrl" id="LblsUrl" placeholder="Https://www.FakeWebsite.com" value="<?php
             if (isset($_REQUEST['sUrl'])) {
@@ -249,20 +314,78 @@ if ($entradaOK) {
                            echo $aErrores['sUrl'];
                        }
                        ?></span>
+            
             </br></br>
-            <select name="acom" id="acomp" value="<?php
+            
+            <label for="acom">Como acudirá</label>
+            <select name="acom" id="acom" value="<?php
             if (isset($_REQUEST['acom'])) {
                 echo $_REQUEST['acom'];
             }
-            ?>">
+            ?>"><option value=null></option>
                 <option value="solo">SOLO</option>
                 <option value="acompañado">ACOMPAÑADO</option>
             </select>
+            
+            </br></br>
 
+            <textarea name="sMessage" rows="5" cols="30" placeholder="Observaciones"><?php
+            if (isset($_REQUEST['sMessage'])) {
+                echo $_REQUEST['sMessage'];
+            }
+            ?></textarea>
+            <span><?php
+                //mostrar el error del sNombre
+                if ($aErrores["sMessage"] != null) {
+                    echo $aErrores['sMessage'];
+                }
+                ?></span>
+            
+            </br></br>
+            
+            <label for="ModoLlegada">Modo Llegada</label>
+            <label for="Andando"><input type="radio" name="desplazamiento" id="Andando" value="Andando" <?php
+            if (isset($_REQUEST['desplazamiento']) === 'Andando') {
+                echo "checked";
+            }
+            ?>>Andando</label>
+            <label for="Coche"><input type="radio" name="desplazamiento" id="Coche" value="En coche" <?php
+            if (isset($_REQUEST['desplazamiento']) === 'En coche') {
+                echo "checked";
+            }
+            ?> > En coche</label>
+            <span><?php
+                //mostrar el error del sNombre
+                if ($aErrores["desplazamiento"] != null) {
+                    echo $aErrores['desplazamiento'];
+                }
+                ?></span>
+            
+            </br></br>
+            
+            <label for="Comidas">A que comidas vas a asistir</label>
+            <label for="comida"><input type="checkbox" name="comidas" id="comida" value="comida" <?php
+            if (isset($_REQUEST['comidas']) && in_array('comida', $_REQUEST['comidas'])) {
+                echo "checked";
+            }
+            ?>>Comida</label>
+            <label for="Cena"><input type="checkbox" name="comidas" id="Cena" value="Cena" <?php
+            if (isset($_REQUEST['comidas']) && in_array('cena', $_REQUEST['comidas'])) {
+                echo "checked";
+            }
+            ?> > Cena</label>
+            <span><?php
+                //mostrar el error del sNombre
+                if ($aErrores["comidas"] != null) {
+                    echo $aErrores['comidas'];
+                }
+                ?></span>
+            </br></br>
+            
         </fieldset> 
         </br>
 
-        
+
 
 
 
@@ -273,7 +396,7 @@ if ($entradaOK) {
 
 
         <h2>Datos Acompañante</h2>
-        
+
         <input type="submit" value="Enviar" name="Enviar">
 
     </form>
