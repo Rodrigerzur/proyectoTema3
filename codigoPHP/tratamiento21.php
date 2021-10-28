@@ -24,8 +24,26 @@ and open the template in the editor.
         <p>
             Color elegido   <?php echo $_REQUEST["favcolor"]; ?>
         </p>
-         <p>
-            $_REQUEST  = <?php print_r ($_REQUEST); ?>
+        <p>
+            $_REQUEST  = <?php print_r($_REQUEST); ?>
+
+            <?php
+            
+            if(!empty($_REQUEST['comidas'])){
+            foreach ($_REQUEST['comidas'] as $seleccion) {
+                echo "<p>" . $seleccion . "</p>";
+            }
+            
+            var_dump($_REQUEST['comidas']);
+            }else{
+                $_REQUEST['comidas']=null;
+                var_dump($_REQUEST['comidas']);
+            }
+            
+            if(in_array('comida', $_REQUEST['comidas'])){
+               echo "si"; 
+            }
+                ?>
         </p>
     </body>
 </html>

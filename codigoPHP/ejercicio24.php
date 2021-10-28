@@ -63,6 +63,7 @@ define('OPCIONAL', 0);
 
 $aListaRadio =['Andando','En coche'];
 $aListaCheckbox = ['comida','cena'];
+$aListaLista =['solo','acompañado'];
 
 $aErrores = ["sNombre" => null,
     "iAltura" => null,
@@ -71,7 +72,7 @@ $aErrores = ["sNombre" => null,
     "direccion" => null,
     "donacion" => null,
     "fecha" => null,
-    "hora" => null,
+    #"hora" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
@@ -90,7 +91,7 @@ $aRespuestas = ["sNombre" => null,
     "direccion" => null,
     "donacion" => null,
     "fecha" => null,
-    "hora" => null,
+   # "hora" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
@@ -100,6 +101,8 @@ $aRespuestas = ["sNombre" => null,
     "comidas"=> null];
 //comprobar si ha pulsado el button enviar 
 if (isset($_REQUEST['Enviar'])) {
+    
+  
 
     //Comprobar si el campo sNombre esta rellenado  y la iAltura
     $aErrores["sNombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST['sNombre'], 200, 1, OBLIGATORIO);
@@ -112,12 +115,15 @@ if (isset($_REQUEST['Enviar'])) {
     $aErrores["email"] = validacionFormularios::validarEmail($_REQUEST['email'], OBLIGATORIO);
     $aErrores["sUrl"] = validacionFormularios::validarURL($_REQUEST['sUrl'], OBLIGATORIO);
     $aErrores["sPasswd"] = validacionFormularios::validarPassword($_REQUEST['sPasswd'], $maximo = 16, $minimo = 2, $tipo = 3, OBLIGATORIO);
-    $aErrores["acom"] = validacionFormularios::comprobarNoVacio($_REQUEST)['acom'];
+    $aErrores["acom"] = validacionFormularios::validarElementoEnLista($_REQUEST['acom'], $aListaLista);
     $aErrores["sMessage"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['sMessage'], $maxTamanio = 1000, $minTamanio = 1, OBLIGATORIO);
-    $aErrores["desplazamiento"]=validacionFormularios::validarElementoEnLista($_REQUEST['desplazamiento'], $aListaRadio);
+    if(isset($_REQUEST['desplaamiento'])){
+        $aErrores["desplazamiento"]=validacionFormularios::validarElementoEnLista($_REQUEST['desplazamiento'], $aListaRadio);
+    }else{
+        $aErrores['desplazamiento']=validacionFormularios::validarElementoEnLista(null, $aListaRadio);
+    }
     $aErrores["comidas"] = validacionFormularios::validarElementoEnLista($_REQUEST['comidas'], $aListaCheckbox);
 
-    #$aErrores['hora'] = validacionFormularios::;
 
     foreach ($aErrores as $campos => $value) {
         //Comprobar si el campo ha sido rellenado
@@ -138,7 +144,7 @@ if ($entradaOK) {
         "direccion" => $_REQUEST['direccion'],
         "donacion" => $_REQUEST['donacion'],
         "fecha" => $_REQUEST['fecha'],
-        "hora" => $_REQUEST['hora'],
+        #"hora" => $_REQUEST['hora'],
         "email" => $_REQUEST['email'],
         "sUrl" => $_REQUEST['sUrl'],
         "sPasswd" => $_REQUEST['sPasswd'],
@@ -155,14 +161,17 @@ if ($entradaOK) {
     echo "Su direccion  es : " . $aRespuestas['direccion'] . "<br>";
     echo "Su cantidada aportada es : " . $aRespuestas['donacion'] . "€<br>";
     echo "Su fecha de asistencia es " . $aRespuestas['fecha'] . "<br>";
-    echo "Su hora de asistencia es " . $aRespuestas['hora'] . "<br>";
+    #echo "Su hora de asistencia es " . $aRespuestas['hora'] . "<br>";
     echo "Su email es " . $aRespuestas['email'] . "<br>";
     echo "Su pagina web es " . $aRespuestas['sUrl'] . "<br>";
     echo "Su contraseña es " . $aRespuestas['sPasswd'] . "<br>";
     echo "Vendra al evento " . $aRespuestas['acom'] . "<br>";
     echo "Observaciones: " . $aRespuestas['sMessage'] . "<br>";
     echo "Usted vendra ".$aRespuestas['desplazamiento']."<br>";
-    echo "Usted asistira a las siguientes comidas ".$aRespuestas['comidas']."<br>";
+    echo "Usted asistira a las siguientes comidas ";
+    foreach($aRespuestas['comidas']as $value){
+    echo $value;} "<br>";
+    
 } else {
     ?>
     <h2>Datos Del Primer Asistente</h2>
@@ -264,17 +273,9 @@ if ($entradaOK) {
             </br></br>
             
             <label for="LblHora">Hora estimada de asistencia</label>
-            <input type="time" name="HORA" id="LblHora" value="<?php
-            if (isset($_REQUEST['hora'])) {
-                echo $_REQUEST['hora'];
-            }
-            ?>"><span><?php
-                       //mostrar el error del sNombre
-                       if ($aErrores["hora"] != null) {
-                           echo $aErrores['hora'];
-                       }
-                       ?></span>
+            <input type="time" name="HORA" id="LblHora">
             </br></br>
+            
             <label for="LblEmail">Email del asistente</label>
             <input type="text" name="email" id="LblEmail" placeholder="FakeEmail@prueba.com" value="<?php
             if (isset($_REQUEST['email'])) {
@@ -322,7 +323,7 @@ if ($entradaOK) {
             if (isset($_REQUEST['acom'])) {
                 echo $_REQUEST['acom'];
             }
-            ?>"><option value=null></option>
+            ?>">
                 <option value="solo">SOLO</option>
                 <option value="acompañado">ACOMPAÑADO</option>
             </select>
@@ -345,12 +346,12 @@ if ($entradaOK) {
             
             <label for="ModoLlegada">Modo Llegada</label>
             <label for="Andando"><input type="radio" name="desplazamiento" id="Andando" value="Andando" <?php
-            if (isset($_REQUEST['desplazamiento']) === 'Andando') {
-                echo "checked";
+            if (isset($_REQUEST['desplazamiento']) && $_REQUEST['desplazamiento'] == 'Andando') {
+                echo 'checked';
             }
             ?>>Andando</label>
             <label for="Coche"><input type="radio" name="desplazamiento" id="Coche" value="En coche" <?php
-            if (isset($_REQUEST['desplazamiento']) === 'En coche') {
+            if (isset($_REQUEST['desplazamiento'])   && $_REQUEST['desplazamiento'] == 'En coche') {
                 echo "checked";
             }
             ?> > En coche</label>
@@ -364,13 +365,13 @@ if ($entradaOK) {
             </br></br>
             
             <label for="Comidas">A que comidas vas a asistir</label>
-            <label for="comida"><input type="checkbox" name="comidas" id="comida" value="comida" <?php
-            if (isset($_REQUEST['comidas']) && in_array('comida', $_REQUEST['comidas'])) {
+            <label for="comida"><input type="checkbox" name="comidas[]" id="comida" value="comida" <?php
+            if (isset($_REQUEST['comidas'])&& in_array('comida', $_REQUEST['comidas'])) {
                 echo "checked";
             }
             ?>>Comida</label>
-            <label for="Cena"><input type="checkbox" name="comidas" id="Cena" value="Cena" <?php
-            if (isset($_REQUEST['comidas']) && in_array('cena', $_REQUEST['comidas'])) {
+            <label for="cena"><input type="checkbox" name="comidas[]" id="cena" value="cena" <?php
+            if (isset($_REQUEST['comidas'])  && in_array('cena', $_REQUEST['comidas'])) {
                 echo "checked";
             }
             ?> > Cena</label>

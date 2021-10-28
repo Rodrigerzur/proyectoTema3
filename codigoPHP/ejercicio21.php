@@ -30,6 +30,21 @@ and open the template in the editor.
             <fieldset>
                 <label for="favcolor">Selecciona un color:</label>
                 <input type="color" id="favcolor" name="favcolor">
+                
+                
+                
+                <br>
+                <label for="Comidas">A que comidas vas a asistir</label>
+            <label for="comida"><input type="checkbox" name="comidas[]" id="comida" value="comida" <?php
+            if (isset($_REQUEST['comidas']) && in_array('comida', $_REQUEST['comidas'])) {
+                echo "checked";
+            }
+            ?>>Comida</label>
+            <label for="Cena"><input type="checkbox" name="comidas[]" id="Cena" value="Cena" <?php
+            if (isset($_REQUEST['comidas']) && in_array('cena', $_REQUEST['comidas'])) {
+                echo "checked";
+            }
+            ?> > Cena</label>
             </fieldset>	
 
             <input type="submit" value="Enviar">
