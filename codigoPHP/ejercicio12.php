@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ejercicio11.php</title>
+        <title>Ejercicio12.php</title>
         <style>
             .respuesta{
                 font-weight: bold;
@@ -27,7 +27,14 @@ and open the template in the editor.
         echo '</span></br>';
 
         echo '</br><span class="enunciado">Mostrando con  "foreach()"</span><span class="respuesta"></br>';
-    
+        echo '<table><tr><th>Clave</th><th>Valor</th></th>';
+        foreach ($_REQUEST as $key => $value) {
+            echo '<tr>';
+            echo "<td>$key</td>";
+            echo "<td>$value</td>";
+            echo '</tr>';
+        }
+        echo '</table>';
 
 
         echo '<h2>Mediante print_r (+ texto preformateado)</h2>';

@@ -19,8 +19,8 @@
                 font-family: sans-serif;
                 font-size:2em;
                 font-weight: bold;
-                color:Blue;
-                border-bottom: 5px solid blue;
+                color: deepskyblue;
+                border-bottom: 5px solid deepskyblue;
 
 
             }
@@ -32,7 +32,7 @@
 
                 width: 70%;
                 background-color: rgba(45, 23, 143, 0.17);
-                color:green;
+                color:purple;
                 font-family: sans-serif;
                 font-weight: bold;
                 font-size:1.2em;
@@ -223,124 +223,124 @@ if ($entradaOK) {
             <legend style="border: 1px solid black; background-color: white">Campos Obligatorios</legend>
             <label for="LblsStringObligatorio">STRING</label>
             <input type="text" name="sStringObligatorio" placeholder="String" id="LblsStringObligatorio" value="<?php
-    if (isset($_REQUEST['sStringObligatorio'])) {
-        echo $_REQUEST['sStringObligatorio'];
-    }
-    ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["sStringObligatorio"] != null) {
-                       echo $aErrores['sStringObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['sStringObligatorio'])) {
+                echo $_REQUEST['sStringObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["sStringObligatorio"] != null) {
+                           echo $aErrores['sStringObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LbliIntObligatorio">INT</label>
             <input type="text" name="iIntObligatorio" placeholder="184" id="LbliIntObligatorio" value="<?php
-                   if (isset($_REQUEST['iIntObligatorio'])) {
-                       echo $_REQUEST['iIntObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iIntObligatorio"] != null) {
-                       echo $aErrores['iIntObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iIntObligatorio'])) {
+                echo $_REQUEST['iIntObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iIntObligatorio"] != null) {
+                           echo $aErrores['iIntObligatorio'];
+                       }
+                       ?></span>
             </br></br>
             <label for="LbliTelefonoObligatorio">TELEFONO</label>
             <input type="text" name="iTelefonoObligatorio" placeholder="687742475" id="LbliTelefonoObligatorio" value="<?php
-                   if (isset($_REQUEST['iTelefonoObligatorio'])) {
-                       echo $_REQUEST['iTelefonoObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iTelefonoObligatorio"] != null) {
-                       echo $aErrores['iTelefonoObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iTelefonoObligatorio'])) {
+                echo $_REQUEST['iTelefonoObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iTelefonoObligatorio"] != null) {
+                           echo $aErrores['iTelefonoObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LbliCodigoPostalObligatorio">CODIGO POSTAL</label>
             <input type="text" name="iCodigoPostalObligatorio" placeholder="49600" id="LbliCodigoPostalObligatorio" value="<?php
-                   if (isset($_REQUEST['iCodigoPostalObligatorio'])) {
-                       echo $_REQUEST['iCodigoPostalObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iCodigoPostalObligatorio"] != null) {
-                       echo $aErrores['iCodigoPostalObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iCodigoPostalObligatorio'])) {
+                echo $_REQUEST['iCodigoPostalObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iCodigoPostalObligatorio"] != null) {
+                           echo $aErrores['iCodigoPostalObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LblalfanumericoDireccionObligatorio">ALFANUMERICO DIRECCION</label>
             <input type="text" name="alfanumericoDireccionObligatorio" placeholder="Av. Federico Silva, 48" id="LblalfanumericoDireccionObligatorio" value="<?php
-                   if (isset($_REQUEST['alfanumericoDireccionObligatorio'])) {
-                       echo $_REQUEST['alfanumericoDireccionObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoDireccionObligatorio"] != null) {
-                       echo $aErrores['alfanumericoDireccionObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['alfanumericoDireccionObligatorio'])) {
+                echo $_REQUEST['alfanumericoDireccionObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoDireccionObligatorio"] != null) {
+                           echo $aErrores['alfanumericoDireccionObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LblfFloatObligatorio">FLOAT </label>
             <input type="text" name="fFloatObligatorio" placeholder="47.5" id="LblfFloatObligatorio" value="<?php
-                   if (isset($_REQUEST['fFloatObligatorio'])) {
-                       echo $_REQUEST['fFloatObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["fFloatObligatorio"] != null) {
-                       echo $aErrores['fFloatObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['fFloatObligatorio'])) {
+                echo $_REQUEST['fFloatObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["fFloatObligatorio"] != null) {
+                           echo $aErrores['fFloatObligatorio'];
+                       }
+                       ?></span>
             </br></br>
             <label for="LbldFechaObligatorio">FECHA</label>
             <input type="date" name="dFechaObligatorio" id="LbldFechaObligatorio" value="<?php
-                   if (isset($_REQUEST['dFechaObligatorio'])) {
-                       echo $_REQUEST['dFechaObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["dFechaObligatorio"] != null) {
-                       echo $aErrores['dFechaObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['dFechaObligatorio'])) {
+                echo $_REQUEST['dFechaObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["dFechaObligatorio"] != null) {
+                           echo $aErrores['dFechaObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
 
             <label for="LblalfanumericoPasswordObligatorio">CONTRASEÑA</label>
             <input type="password" name="alfanumericoPasswordObligatorio" id="LblalfanumericoPasswordObligatorio" placeholder="*******" value="<?php
-                   if (isset($_REQUEST['alfanumericoPasswordObligatorio'])) {
-                       echo $_REQUEST['alfanumericoPasswordObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoPasswordObligatorio"] != null) {
-                       echo $aErrores['alfanumericoPasswordObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['alfanumericoPasswordObligatorio'])) {
+                echo $_REQUEST['alfanumericoPasswordObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoPasswordObligatorio"] != null) {
+                           echo $aErrores['alfanumericoPasswordObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LblalfanumericoUrlObligatorio">URL</label>
             <input type="text" name="alfanumericoUrlObligatorio" id="LblalfanumericoUrlObligatorio" placeholder="Https://www.FakeWebsite.com" value="<?php
-                   if (isset($_REQUEST['alfanumericoUrlObligatorio'])) {
-                       echo $_REQUEST['alfanumericoUrlObligatorio'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoUrlObligatorio"] != null) {
-                       echo $aErrores['alfanumericoUrlObligatorio'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['alfanumericoUrlObligatorio'])) {
+                echo $_REQUEST['alfanumericoUrlObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoUrlObligatorio"] != null) {
+                           echo $aErrores['alfanumericoUrlObligatorio'];
+                       }
+                       ?></span>
 
             </br></br>
 
@@ -352,71 +352,71 @@ if ($entradaOK) {
 
             </br></br>
 
-            <label for="TEXTO LARGO ALFANUMERICO">TEXTO LARGO ALFANUMERICO</label>
+            <label for="TextoLargoAlfanumerico">TEXTO LARGO ALFANUMERICO</label>
             <br>
-            <textarea name="alfanumericoTextoLargoObligatorio" rows="5" cols="30" placeholder="Observaciones"><?php
-                   if (isset($_REQUEST['alfanumericoTextoLargoObligatorio'])) {
-                       echo $_REQUEST['alfanumericoTextoLargoObligatorio'];
-                   }
-                   ?></textarea>
+            <textarea name="alfanumericoTextoLargoObligatorio" rows="5" cols="30" placeholder="Observaciones" id="TextoLargoObligatorio"><?php
+                if (isset($_REQUEST['alfanumericoTextoLargoObligatorio'])) {
+                    echo $_REQUEST['alfanumericoTextoLargoObligatorio'];
+                }
+                ?></textarea>
             <span><?php
-            //mostrar el error 
-            if ($aErrores["alfanumericoTextoLargoObligatorio"] != null) {
-                echo $aErrores['alfanumericoTextoLargoObligatorio'];
-            }
-                   ?></span>
+                //mostrar el error 
+                if ($aErrores["alfanumericoTextoLargoObligatorio"] != null) {
+                    echo $aErrores['alfanumericoTextoLargoObligatorio'];
+                }
+                ?></span>
 
             </br></br>
 
-            <label for="RADIO BUTTONS">RADIO BUTTONS</label>
-            <label for="Opcion 1"><input type="radio" name="radioObligatorio" id="Opcion 1" value="Opcion 1" <?php
-            if (isset($_REQUEST['radioObligatorio'])) {
-                if ($_REQUEST['radioObligatorio'] == 'Opcion 1') {
+            <label>RADIO BUTTONS</label>
+            <label for="Opcion1"><input type="radio" name="radioObligatorio" id="Opcion1" value="Opcion 1" <?php
+                if (isset($_REQUEST['radioObligatorio'])) {
+                    if ($_REQUEST['radioObligatorio'] == 'Opcion 1') {
 
-                    echo "checked";
+                        echo "checked";
+                    }
                 }
-            }
-                   ?>>Opcion 1</label>
-            <label for="Opcion 2"><input type="radio" name="radioObligatorio" id="Opcion 2" value="Opcion 2" <?php
-            if (isset($_REQUEST['radioObligatorio'])) {
-                if ($_REQUEST['radioObligatorio'] == 'Opcion 2') {
+                ?>>Opcion 1</label>
+            <label for="Opcion2"><input type="radio" name="radioObligatorio" id="Opcion2" value="Opcion 2" <?php
+                if (isset($_REQUEST['radioObligatorio'])) {
+                    if ($_REQUEST['radioObligatorio'] == 'Opcion 2') {
 
-                    echo "checked";
+                        echo "checked";
+                    }
                 }
-            }
-                   ?> > Opcion 2</label>
+                ?> > Opcion 2</label>
             <span><?php
-            //mostrar el error 
-            if ($aErrores["radioObligatorio"] != null) {
-                echo $aErrores['radioObligatorio'];
-            }
-                   ?></span>
+                //mostrar el error 
+                if ($aErrores["radioObligatorio"] != null) {
+                    echo $aErrores['radioObligatorio'];
+                }
+                ?></span>
 
             </br></br>
 
-            <label for="CHECKBOX">CHECKBOXES</label>
-            <label for="Opcion 1">
+            <label>CHECKBOXES</label>
+            
                 <input type="checkbox" name="checkboxesObligatorias[]" id="checkboxesObligatorias1" value="Opcion 1" <?php
-            if (!empty($_REQUEST['checkboxesObligatorias'])) {
-                if (in_array('opcion 1', $_REQUEST['checkboxesObligatorias'])) {
-                    echo "checked";
+                if (!empty($_REQUEST['checkboxesObligatorias'])) {
+                    if (in_array('Opcion 1', $_REQUEST['checkboxesObligatorias'])) {
+                        echo "checked";
+                    }
                 }
-            }
-                   ?>>Opcion 1</label>
-            <label for="Opcion 2">
+                ?>><label for="checkboxesObligatorias1">Opcion 1</label>
+            
                 <input type="checkbox" name="checkboxesObligatorias[]" id="checkboxesObligatorias2" value="Opcion 2" <?php
-            if (!empty($_REQUEST['checkboxesObligatorias'])) {
-                if (in_array('opcion 2', $_REQUEST['checkboxesObligatorias'])) {
-                    echo "checked";
+                if (!empty($_REQUEST['checkboxesObligatorias'])) {
+                    if (in_array('Opcion 2', $_REQUEST['checkboxesObligatorias'])) {
+                        echo "checked";
+                    }
                 }
-            }
-                   ?>>Opcion 2</label>
+                ?>><label for="checkboxesObligatorias2">Opcion 2</label>
             <span><?php
-            //mostrar el error 
-            if ($aErrores["checkboxesObligatorias"] != null) {
-                echo $aErrores['checkboxesObligatorias'];
-            }
-                   ?></span>
+                //mostrar el error 
+                if ($aErrores["checkboxesObligatorias"] != null) {
+                    echo $aErrores['checkboxesObligatorias'];
+                }
+                ?></span>
             </br></br>
 
         </fieldset> 
@@ -433,107 +433,107 @@ if ($entradaOK) {
             if (isset($_REQUEST['sStringOpcional'])) {
                 echo $_REQUEST['sStringOpcional'];
             }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["sStringOpcional"] != null) {
-                       echo $aErrores['sStringOpcional'];
-                   }
-                   ?></span>
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["sStringOpcional"] != null) {
+                           echo $aErrores['sStringOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LbliIntOpcional">INT</label>
             <input type="text" name="iIntOpcional" placeholder="184" id="LbliIntOpcional" value="<?php
-                   if (isset($_REQUEST['iIntOpcional'])) {
-                       echo $_REQUEST['iIntOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iIntOpcional"] != null) {
-                       echo $aErrores['iIntOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iIntOpcional'])) {
+                echo $_REQUEST['iIntOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iIntOpcional"] != null) {
+                           echo $aErrores['iIntOpcional'];
+                       }
+                       ?></span>
             </br></br>
             <label for="LbliTelefonoOpcional">TELEFONO</label>
             <input type="text" name="iTelefonoOpcional" placeholder="687742475" id="LbliTelefonoOpcional" value="<?php
-                   if (isset($_REQUEST['iTelefonoOpcional'])) {
-                       echo $_REQUEST['iTelefonoOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iTelefonoOpcional"] != null) {
-                       echo $aErrores['iTelefonoOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iTelefonoOpcional'])) {
+                echo $_REQUEST['iTelefonoOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iTelefonoOpcional"] != null) {
+                           echo $aErrores['iTelefonoOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LbliCodigoPostalOpcional">CODIGO POSTAL</label>
             <input type="text" name="iCodigoPostalOpcional" placeholder="49600" id="LbliCodigoPostalOpcional" value="<?php
-                   if (isset($_REQUEST['iCodigoPostalOpcional'])) {
-                       echo $_REQUEST['iCodigoPostalOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["iCodigoPostalOpcional"] != null) {
-                       echo $aErrores['iCodigoPostalOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['iCodigoPostalOpcional'])) {
+                echo $_REQUEST['iCodigoPostalOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["iCodigoPostalOpcional"] != null) {
+                           echo $aErrores['iCodigoPostalOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LblalfanumericoDireccionOpcional">ALFANUMERICO DIRECCION</label>
             <input type="text" name="alfanumericoDireccionOpcional" placeholder="Av. Federico Silva, 48" id="LblalfanumericoDireccionOpcional" value="<?php
-                   if (isset($_REQUEST['alfanumericoDireccionOpcional'])) {
-                       echo $_REQUEST['alfanumericoDireccionOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoDireccionOpcional"] != null) {
-                       echo $aErrores['alfanumericoDireccionOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['alfanumericoDireccionOpcional'])) {
+                echo $_REQUEST['alfanumericoDireccionOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoDireccionOpcional"] != null) {
+                           echo $aErrores['alfanumericoDireccionOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
             <label for="LblfFloatOpcional">FLOAT </label>
             <input type="text" name="fFloatOpcional" placeholder="47.5" id="LblfFloatOpcional" value="<?php
-                   if (isset($_REQUEST['fFloatOpcional'])) {
-                       echo $_REQUEST['fFloatOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["fFloatOpcional"] != null) {
-                       echo $aErrores['fFloatOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['fFloatOpcional'])) {
+                echo $_REQUEST['fFloatOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["fFloatOpcional"] != null) {
+                           echo $aErrores['fFloatOpcional'];
+                       }
+                       ?></span>
             </br></br>
             <label for="LbldFechaOpcional">FECHA</label>
             <input type="date" name="dFechaOpcional" id="LbldFechaOpcional" value="<?php
-                   if (isset($_REQUEST['dFechaOpcional'])) {
-                       echo $_REQUEST['dFechaOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["dFechaOpcional"] != null) {
-                       echo $aErrores['dFechaOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['dFechaOpcional'])) {
+                echo $_REQUEST['dFechaOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["dFechaOpcional"] != null) {
+                           echo $aErrores['dFechaOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
 
             <label for="LblalfanumericoPasswordOpcional">CONTRASEÑA</label>
             <input type="password" name="alfanumericoPasswordOpcional" id="LblalfanumericoPasswordOpcional" placeholder="*******" value="<?php
-                   if (isset($_REQUEST['alfanumericoPasswordOpcional'])) {
-                       echo $_REQUEST['alfanumericoPasswordOpcional'];
-                   }
-                   ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoPasswordOpcional"] != null) {
-                       echo $aErrores['alfanumericoPasswordOpcional'];
-                   }
-                   ?></span>
+            if (isset($_REQUEST['alfanumericoPasswordOpcional'])) {
+                echo $_REQUEST['alfanumericoPasswordOpcional'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoPasswordOpcional"] != null) {
+                           echo $aErrores['alfanumericoPasswordOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
@@ -543,28 +543,28 @@ if ($entradaOK) {
                        echo $_REQUEST['alfanumericoUrlOpcional'];
                    }
                    ?>"><span><?php
-                   //mostrar el error 
-                   if ($aErrores["alfanumericoUrlOpcional"] != null) {
-                       echo $aErrores['alfanumericoUrlOpcional'];
-                   }
-                   ?></span>
+                       //mostrar el error 
+                       if ($aErrores["alfanumericoUrlOpcional"] != null) {
+                           echo $aErrores['alfanumericoUrlOpcional'];
+                       }
+                       ?></span>
 
             </br></br>
 
 
-            <label for="TEXTO LARGO ALFANUMERICO">TEXTO LARGO ALFANUMERICO</label>
+            <label for="TextoLargoAlfanumerico">TEXTO LARGO ALFANUMERICO</label>
             <br>
-            <textarea name="alfanumericoTextoLargoOpcional" rows="5" cols="30" placeholder="Observaciones"><?php
-                   if (isset($_REQUEST['alfanumericoTextoLargoOpcional'])) {
-                       echo $_REQUEST['alfanumericoTextoLargoOpcional'];
-                   }
-                   ?></textarea>
+            <textarea name="alfanumericoTextoLargoOpcional" rows="5" cols="30" placeholder="Observaciones" id="TextoLargoAlfanumerico"><?php
+                if (isset($_REQUEST['alfanumericoTextoLargoOpcional'])) {
+                    echo $_REQUEST['alfanumericoTextoLargoOpcional'];
+                }
+                ?></textarea>
             <span><?php
-            //mostrar el error 
-            if ($aErrores["alfanumericoTextoLargoOpcional"] != null) {
-                echo $aErrores['alfanumericoTextoLargoOpcional'];
-            }
-                   ?></span>
+                //mostrar el error 
+                if ($aErrores["alfanumericoTextoLargoOpcional"] != null) {
+                    echo $aErrores['alfanumericoTextoLargoOpcional'];
+                }
+                ?></span>
 
             </br></br>
 
