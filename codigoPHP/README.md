@@ -5,7 +5,7 @@ version 1
 
 Es un proyecto de prueba.
 
-## ENTORNO DE DESARROLLO
+## ENTORNO DE DESARROLLO Y EXPLOTACION
 
 * Apache2.4
 * Php 7.4
