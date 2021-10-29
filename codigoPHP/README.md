@@ -11,3 +11,5 @@ Es un proyecto de prueba.
 * Php 7.4
 * MySQL 8.0
 * XDebug 2.9
+
+sdfjkasdjfjkldhsgjkdfhbvgjkl
