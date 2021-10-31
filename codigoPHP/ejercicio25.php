@@ -57,14 +57,19 @@
     </body>
 </html>
 <?php
-require_once '../core/210322ValidacionFormularios.php';
+//Incluir la libreria de funciones para la validacion
+require_once '../core/210322ValidacionFormularios.php'; 
+//Definir constantes que usare para determinar si una parte del formulario sera obligatoria para enviarlo o no
 define('OBLIGATORIO', 1);
 define('OPCIONAL', 0);
 
+//variables con los posibles valores de listas desplegables, checkboxes y radio buttons para su posterior comparacion y validacion
 $aListaValoresRadio = ['Opcion 1', 'Opcion 2'];
 $aListaValoresLista = ['Opcion 1', 'Opcion 2'];
 $aListaValoresCheckbox = ['Opcion 1', 'Opcion 2'];
 
+
+//Inicializacion del array de errores con todos los campos del formulario a validar
 $aErrores = ["sStringObligatorio" => null,
     "iIntObligatorio" => null,
     "iTelefonoObligatorio" => null,
@@ -73,6 +78,7 @@ $aErrores = ["sStringObligatorio" => null,
     "fFloatObligatorio" => null,
     "dFechaObligatorio" => null,
     "alfanumericoUrlObligatorio" => null,
+    "emailObligatorio" => null,
     "alfanumericoPasswordObligatorio" => null,
     "listaObligatorio" => null,
     "alfanumericoTextoLargoObligatorio" => null,
@@ -100,6 +106,7 @@ $aRespuestas = ["sStringObligatorio" => null,
     "fFloatObligatorio" => null,
     "dFechaObligatorio" => null,
     "alfanumericoUrlObligatorio" => null,
+    "emailObligatorio" =>null,
     "alfanumericoPasswordObligatorio" => null,
     "listaObligatorio" => null,
     "alfanumericoTextoLargoObligatorio" => null,
@@ -118,7 +125,7 @@ $aRespuestas = ["sStringObligatorio" => null,
 
 //comprobar si ha pulsado el button enviar 
 if (isset($_REQUEST['Enviar'])) {
-
+//Funciones de validacion para cada campo del formulario ya sean obligatorios o no
     $aErrores["sStringObligatorio"] = validacionFormularios::comprobarAlfabetico($_REQUEST['sStringObligatorio'], 200, 1, OBLIGATORIO);
     $aErrores["iIntObligatorio"] = validacionFormularios::comprobarEntero($_REQUEST['iIntObligatorio'], 200, 1, OBLIGATORIO);
     $aErrores["iTelefonoObligatorio"] = validacionFormularios::validarTelefono($_REQUEST['iTelefonoObligatorio'], OBLIGATORIO);
@@ -127,6 +134,7 @@ if (isset($_REQUEST['Enviar'])) {
     $aErrores["fFloatObligatorio"] = validacionFormularios::comprobarFloat($_REQUEST['fFloatObligatorio'], $max = PHP_FLOAT_MAX, $min = -PHP_FLOAT_MAX, OBLIGATORIO);
     $aErrores["dFechaObligatorio"] = validacionFormularios::validarFecha($_REQUEST['dFechaObligatorio'], $dFechaObligatorioMaxima = '01/01/2200', $dFechaObligatorioMinima = "01/01/1900", OBLIGATORIO);
     $aErrores["alfanumericoUrlObligatorio"] = validacionFormularios::validarURL($_REQUEST['alfanumericoUrlObligatorio'], OBLIGATORIO);
+    $aErrores["emailObligatorio"] = validacionFormularios::validarEmail($_REQUEST['emailObligatorio'], OBLIGATORIO);
     $aErrores["alfanumericoPasswordObligatorio"] = validacionFormularios::validarPassword($_REQUEST['alfanumericoPasswordObligatorio'], $maximo = 16, $minimo = 2, $tipo = 3, OBLIGATORIO);
     $aErrores["listaObligatorio"] = validacionFormularios::validarElementoEnLista($_REQUEST['listaObligatorio'], $aListaValoresLista);
     $aErrores["alfanumericoTextoLargoObligatorio"] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['alfanumericoTextoLargoObligatorio'], $maxTamanio = 1000, $minTamanio = 1, OBLIGATORIO);
@@ -171,6 +179,7 @@ if ($entradaOK) {
         "fFloatObligatorio" => $_REQUEST['fFloatObligatorio'],
         "dFechaObligatorio" => $_REQUEST['dFechaObligatorio'],
         "alfanumericoUrlObligatorio" => $_REQUEST['alfanumericoUrlObligatorio'],
+        "emailObligatorio" => $_REQUEST['emailObligatorio'],
         "alfanumericoPasswordObligatorio" => $_REQUEST['alfanumericoPasswordObligatorio'],
         "listaObligatorio" => $_REQUEST['listaObligatorio'],
         "alfanumericoTextoLargoObligatorio" => $_REQUEST['alfanumericoTextoLargoObligatorio'],
@@ -196,6 +205,7 @@ if ($entradaOK) {
     echo "fFloatObligatorio: " . $aRespuestas['fFloatObligatorio'] . "€<br>";
     echo "dFechaObligatorio " . $aRespuestas['dFechaObligatorio'] . "<br>";
     echo "alfanumericoUrlObligatorio" . $aRespuestas['alfanumericoUrlObligatorio'] . "<br>";
+    echo "emailObligatorio" . $aRespuestas['emailObligatorio'] . "<br>";
     echo "alfanumericoPasswordObligatorio" . $aRespuestas['alfanumericoPasswordObligatorio'] . "<br>";
     echo "listaObligatorio " . $aRespuestas['listaObligatorio'] . "<br>";
     echo "alfanumericoTextoLargoObligatorio " . $aRespuestas['alfanumericoTextoLargoObligatorio'] . "<br>";
@@ -216,6 +226,8 @@ if ($entradaOK) {
     echo "alfanumericoPasswordOpcional" . $aRespuestas['alfanumericoPasswordOpcional'] . "<br>";
     echo "alfanumericoTextoLargoOpcional " . $aRespuestas['alfanumericoTextoLargoOpcional'] . "<br>";
 } else {
+    
+    //Formulario a mostrar si es la primera vez en la pagina o alguno de los dastos introducidos es incorrecto
     ?>
     <h2>FORMULARIO CAMPOS OBLIGATORIOS</h2>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -275,7 +287,7 @@ if ($entradaOK) {
 
             </br></br>
 
-            <label for="LblalfanumericoDireccionObligatorio">ALFANUMERICO DIRECCION</label>
+            <label for="LblalfanumericoDireccionObligatorio">DIRECCION</label>
             <input type="text" name="alfanumericoDireccionObligatorio" placeholder="Av. Federico Silva, 48" id="LblalfanumericoDireccionObligatorio" value="<?php
             if (isset($_REQUEST['alfanumericoDireccionObligatorio'])) {
                 echo $_REQUEST['alfanumericoDireccionObligatorio'];
@@ -315,7 +327,20 @@ if ($entradaOK) {
 
             </br></br>
 
+             <label for="emailObligatorio">EMAIL</label>
+            <input type="text" name="emailObligatorio" id="emailObligatorio" placeholder="Email@domain.com" value="<?php
+            if (isset($_REQUEST['emailObligatorio'])) {
+                echo $_REQUEST['emailObligatorio'];
+            }
+            ?>"><span><?php
+                       //mostrar el error 
+                       if ($aErrores["emailObligatorio"] != null) {
+                           echo $aErrores['emailObligatorio'];
+                       }
+                       ?></span>
 
+            </br></br>
+            
             <label for="LblalfanumericoPasswordObligatorio">CONTRASEÑA</label>
             <input type="password" name="alfanumericoPasswordObligatorio" id="LblalfanumericoPasswordObligatorio" placeholder="*******" value="<?php
             if (isset($_REQUEST['alfanumericoPasswordObligatorio'])) {
@@ -352,7 +377,7 @@ if ($entradaOK) {
 
             </br></br>
 
-            <label for="TextoLargoAlfanumerico">TEXTO LARGO ALFANUMERICO</label>
+            <label for="TextoLargoAlfanumerico">TEXTO LARGO</label>
             <br>
             <textarea name="alfanumericoTextoLargoObligatorio" rows="5" cols="30" placeholder="Observaciones" id="TextoLargoObligatorio"><?php
                 if (isset($_REQUEST['alfanumericoTextoLargoObligatorio'])) {

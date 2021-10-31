@@ -57,14 +57,18 @@
     </body>
 </html>
 <?php
+//Incluir la libreria de funciones para la validacion
 require_once '../core/210322ValidacionFormularios.php';
+//Definir constantes que usare para determinar si una parte del formulario sera obligatoria para enviarlo o no
 define('OBLIGATORIO', 1);
 define('OPCIONAL', 0);
 
+//variables con los posibles valores de listas desplegables, checkboxes y radio buttons para su posterior comparacion y validacion
 $aListaRadio = ['Andando', 'En coche'];
 $aListaCheckbox = ['comida', 'cena'];
 $aListaLista = ['solo', 'acompañado'];
 
+//Inicializacion del array de errores con todos los campos del formulario a validar
 $aErrores = ["sNombre" => null,
     "iAltura" => null,
     "iTelefono" => null,
@@ -72,7 +76,6 @@ $aErrores = ["sNombre" => null,
     "direccion" => null,
     "donacion" => null,
     "fecha" => null,
-    #"hora" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
@@ -91,7 +94,6 @@ $aRespuestas = ["sNombre" => null,
     "direccion" => null,
     "donacion" => null,
     "fecha" => null,
-    # "hora" => null,
     "email" => null,
     "sUrl" => null,
     "sPasswd" => null,
@@ -101,10 +103,7 @@ $aRespuestas = ["sNombre" => null,
     "comidas" => null];
 //comprobar si ha pulsado el button enviar 
 if (isset($_REQUEST['Enviar'])) {
-
-
-
-//Comprobar si el campo sNombre esta rellenado  y la iAltura
+//Funciones de validacion para cada campo del formulario ya sean obligatorios o no
     $aErrores["sNombre"] = validacionFormularios::comprobarAlfabetico($_REQUEST['sNombre'], 200, 1, OBLIGATORIO);
     $aErrores["iAltura"] = validacionFormularios::comprobarEntero($_REQUEST['iAltura'], 200, 1, OBLIGATORIO);
     $aErrores["iTelefono"] = validacionFormularios::validarTelefono($_REQUEST['iTelefono'], OBLIGATORIO);
@@ -147,7 +146,6 @@ if ($entradaOK) {
         "direccion" => $_REQUEST['direccion'],
         "donacion" => $_REQUEST['donacion'],
         "fecha" => $_REQUEST['fecha'],
-        #"hora" => $_REQUEST['hora'],
         "email" => $_REQUEST['email'],
         "sUrl" => $_REQUEST['sUrl'],
         "sPasswd" => $_REQUEST['sPasswd'],
@@ -164,7 +162,6 @@ if ($entradaOK) {
     echo "Su direccion  es : " . $aRespuestas['direccion'] . "<br>";
     echo "Su cantidada aportada es : " . $aRespuestas['donacion'] . "€<br>";
     echo "Su fecha de asistencia es " . $aRespuestas['fecha'] . "<br>";
-#echo "Su hora de asistencia es " . $aRespuestas['hora'] . "<br>";
     echo "Su email es " . $aRespuestas['email'] . "<br>";
     echo "Su pagina web es " . $aRespuestas['sUrl'] . "<br>";
     echo "Su contraseña es " . $aRespuestas['sPasswd'] . "<br>";
@@ -176,6 +173,7 @@ if ($entradaOK) {
         echo $value.' ' ;
     } "<br>";
 } else {
+      //Formulario a mostrar si es la primera vez en la pagina o alguno de los dastos introducidos es incorrecto
     ?>
     <h2>Datos Del Primer Asistente</h2>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -187,7 +185,7 @@ if ($entradaOK) {
                 echo $_REQUEST['sNombre'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["sNombre"] != null) {
                            echo $aErrores['sNombre'];
                        }
@@ -201,7 +199,7 @@ if ($entradaOK) {
                 echo $_REQUEST['iAltura'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["iAltura"] != null) {
                            echo $aErrores['iAltura'];
                        }
@@ -213,7 +211,7 @@ if ($entradaOK) {
                 echo $_REQUEST['iTelefono'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["iTelefono"] != null) {
                            echo $aErrores['iTelefono'];
                        }
@@ -227,7 +225,7 @@ if ($entradaOK) {
                 echo $_REQUEST['cp'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["cp"] != null) {
                            echo $aErrores['cp'];
                        }
@@ -241,7 +239,7 @@ if ($entradaOK) {
                 echo $_REQUEST['direccion'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["direccion"] != null) {
                            echo $aErrores['direccion'];
                        }
@@ -255,7 +253,7 @@ if ($entradaOK) {
                 echo $_REQUEST['donacion'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["donacion"] != null) {
                            echo $aErrores['donacion'];
                        }
@@ -267,16 +265,12 @@ if ($entradaOK) {
                 echo $_REQUEST['fecha'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["fecha"] != null) {
                            echo $aErrores['fecha'];
                        }
                        ?></span>
 
-            </br></br>
-
-            <label for="LblHora">Hora estimada de asistencia</label>
-            <input type="time" name="HORA" id="LblHora">
             </br></br>
 
             <label for="LblEmail">Email del asistente</label>
@@ -285,7 +279,7 @@ if ($entradaOK) {
                 echo $_REQUEST['email'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["email"] != null) {
                            echo $aErrores['email'];
                        }
@@ -299,7 +293,7 @@ if ($entradaOK) {
                 echo $_REQUEST['sPasswd'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["sPasswd"] != null) {
                            echo $aErrores['sPasswd'];
                        }
@@ -313,7 +307,7 @@ if ($entradaOK) {
                 echo $_REQUEST['sUrl'];
             }
             ?>"><span><?php
-                       //mostrar el error del sNombre
+                       //mostrar el error 
                        if ($aErrores["sUrl"] != null) {
                            echo $aErrores['sUrl'];
                        }
@@ -339,7 +333,7 @@ if ($entradaOK) {
                 }
                 ?></textarea>
             <span><?php
-                //mostrar el error del sNombre
+                //mostrar el error 
                 if ($aErrores["sMessage"] != null) {
                     echo $aErrores['sMessage'];
                 }
@@ -364,7 +358,7 @@ if ($entradaOK) {
                 }
                 ?> > En coche</label>
             <span><?php
-                //mostrar el error del sNombre
+                //mostrar el error 
                 if ($aErrores["desplazamiento"] != null) {
                     echo $aErrores['desplazamiento'];
                 }
@@ -390,7 +384,7 @@ if ($entradaOK) {
                        }
                        ?> > Cena</label>
             <span><?php
-                   //mostrar el error del sNombre
+                   //mostrar el error 
                    if ($aErrores["comidas"] != null) {
                        echo $aErrores['comidas'];
                    }
@@ -399,18 +393,6 @@ if ($entradaOK) {
 
         </fieldset> 
         </br>
-
-
-
-
-
-
-
-
-
-
-
-        <h2>Datos Acompañante</h2>
 
         <input type="submit" value="Enviar" name="Enviar">
 
