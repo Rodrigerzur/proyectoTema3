@@ -23,9 +23,11 @@ and open the template in the editor.
     <body>
         <?php
         echo '<span class="enunciado">Mostrando con  "print_r()"</span><span class="respuesta"></br>';
+        //globals contiene todas las variables superglobales
         print_r($GLOBALS);
         echo '</span></br>';
 
+        //con foreach recorriendo cada  valor de Request
         echo '</br><span class="enunciado">Mostrando con  "foreach()"</span><span class="respuesta"></br>';
         echo '<table><tr><th>Clave</th><th>Valor</th></th>';
         foreach ($_REQUEST as $key => $value) {
@@ -36,7 +38,7 @@ and open the template in the editor.
         }
         echo '</table>';
 
-
+        //formateado el print_r con la etiqueta html <pre> para que los arrays vacios no muestren error
         echo '<h2>Mediante print_r (+ texto preformateado)</h2>';
         echo '<pre>';
         print_r($GLOBALS);
