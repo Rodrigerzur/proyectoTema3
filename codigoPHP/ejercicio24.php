@@ -366,23 +366,23 @@ if ($entradaOK) {
 
             </br></br>
 
-            <label for="Comidas">A que comidas vas a asistir</label>
-            <label for="comida">
+            <label>A que comidas vas a asistir</label>
+            
                 <input type="checkbox" name="comidas[]" id="comida" value="comida" <?php
                 if (!empty($_REQUEST['comidas'])) {
                     if (in_array('comida', $_REQUEST['comidas'])) {
                         echo "checked";
                     }
                 }
-                ?>>Comida</label>
-            <label for="cena">
+                ?>><label for="comida">Comida</label>
+            
                 <input type="checkbox" name="comidas[]" id="cena" value="cena" <?php
                        if (!empty($_REQUEST['comidas'])) {
                            if (in_array('cena', $_REQUEST['comidas'])) {
                                echo "checked";
                            }
                        }
-                       ?> > Cena</label>
+                       ?>><label for="cena"> Cena</label>
             <span><?php
                    //mostrar el error 
                    if ($aErrores["comidas"] != null) {
